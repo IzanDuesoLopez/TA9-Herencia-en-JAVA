@@ -20,4 +20,50 @@ public class Raices {
 		return resultado;
 	}
 	
+	// Devuelve true si el discriminante es mayor o igual a 0
+	public boolean tieneRaices() {
+		boolean resultado = false;
+		
+		// Si el discriminante es mayor o igual a 0
+		if(this.getDiscriminante() >= 0) {
+			resultado = true; // Resultado es igual a true
+		}
+		
+		return resultado;
+	}
+	
+	// Devuelve true si tiene una unica solución
+	public boolean tieneRaiz() {
+		boolean resultado = false;
+
+		// Si el discriminante es igual a 0
+		if (this.getDiscriminante() == 0) {
+			resultado = true; // Resultado es igual a true
+		}
+
+		return resultado;
+	}
+	
+	// Método calcular
+	public void calcular() {
+		
+		double resultado;
+		
+		// Si solo tiene una solución
+		if(this.getDiscriminante() >= 0) {
+			
+			if(this.getDiscriminante() == 0) {
+				// Calculamos la solución y la mostramos por pantalla
+				resultado = ((-b) - (4 * a * c)) / (2 * a);
+				System.out.println("Resultado: " + resultado);
+			// Si tiene 2 soluciones
+			} else if(this.getDiscriminante() > 0) {
+				// ((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+			}
+			
+		}else {
+			System.out.println("¡No tiene solución!");
+		}
+	}
+	
 }
