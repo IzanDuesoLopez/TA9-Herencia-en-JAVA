@@ -10,7 +10,7 @@ public class Ejercicio1MainApp {
 		Electrodomestico[] electrodomesticos = new Electrodomestico[10];
 		crear_electrodomesticos(electrodomesticos, sc);
 		calcular_precio_final(electrodomesticos);
-		
+		calcular_precio_por_clase(electrodomesticos);
 	}
 
 	// Instancia diez objetos y se añaden a la array de electrodomésticos
@@ -48,8 +48,22 @@ public class Ejercicio1MainApp {
 	
 	// Calcula precio de cada clase
 	public static void calcular_precio_por_clase(Electrodomestico[] electrodomesticos) {
+		double precio_lavadoras = 0;
+		double precio_televisores = 0;
+		double precio_electrodomesticos = 0;
+		
 		for(Electrodomestico x : electrodomesticos) {
+			precio_electrodomesticos += x.getPrecioBase();
 			
+			if(x instanceof Lavadora) {
+				precio_lavadoras += x.getPrecioBase();
+			} else if(x instanceof Television) {
+				precio_televisores += x.getPrecioBase();
+			} 
 		}
+		
+		System.out.println("El precio de todas las lavadoras es de " + precio_lavadoras + "€.");
+		System.out.println("El precio de todos los televisores es de " + precio_televisores + "€.");
+		System.out.println("El precio de todos los electrodomésticos es de " + precio_electrodomesticos + "€.");
 	}
 }
