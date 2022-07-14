@@ -86,11 +86,6 @@ public class Electrodomestico {
 		return consumo;
 
 	}
-	
-	// Método que según el consumo energético y peso aumenta el precio
-	public void precioFinal() {
-		// ---
-	}
 
 	// Getters y Setters
 	public double getPrecioBase() {
@@ -133,10 +128,10 @@ public class Electrodomestico {
 				+ consumoEnergetico + ", peso=" + peso + "Kg " + "]";
 	}
 	
-	public int precioFinal() {
+	public double precioFinal() {
 		
 		// Aumento en funcion del consumo
-		switch (consumoEnerg) {
+		switch (consumoEnergetico) {
 			case ('A'):
 				this.precioBase += 100;
 				break;
