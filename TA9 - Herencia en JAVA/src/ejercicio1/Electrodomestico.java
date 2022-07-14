@@ -128,7 +128,7 @@ public class Electrodomestico {
 				+ consumoEnergetico + ", peso=" + peso + "Kg " + "]";
 	}
 	
-	public double precioFinal() {
+	public void precioFinal() {
 		
 		// Aumento en funcion del consumo
 		switch (consumoEnergetico) {
@@ -165,8 +165,6 @@ public class Electrodomestico {
 		else {
 			this.precioBase += 100;
 		}
-				
-		return precioBase;
 	}
 
 }
