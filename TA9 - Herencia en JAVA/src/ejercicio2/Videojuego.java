@@ -80,7 +80,18 @@ public class Videojuego {
 				+ ", genero=" + genero + ", compañia=" + compañia + "]";
 	}
 	
-	
-	
-	
+	public void entregar() {
+	    this.entregado = true;
+	}
+	public void devolver() {
+	    this.entregado = false;
+	}
+	public boolean estaEntregado() {
+	    return entregado;
+	}
+	public void compareTo (Object a) {
+	    if (a instanceof Serie) {
+	        System.out.println("El videojuego tiene" + this.horasEstimadas + "horas, el videojuego a comparar tiene: " + ((Videojuego) a).horasEstimadas);
+	    }
+	}
 }

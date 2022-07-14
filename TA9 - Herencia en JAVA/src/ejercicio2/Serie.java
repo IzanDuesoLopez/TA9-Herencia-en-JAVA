@@ -88,4 +88,20 @@ public class Serie {
 				+ ", genero=" + genero + ", creador=" + creador + "]";
 	}
 	
+	public void entregar() {
+	    this.entregado = true;
+	}
+	public void devolver() {
+	    this.entregado = false;
+	}
+	public boolean estaEntregado() {
+	    return entregado;
+	}
+	public void compareTo (Object a) {
+	    if (a instanceof Serie) {
+	        System.out.println("La serie tiene" + this.numeroDeTemporadas + "temporadas, la serie a comparar tiene: " + ((Serie) a).numeroDeTemporadas);
+	    }
+	}
+	
+	
 }
