@@ -133,6 +133,49 @@ public class Electrodomestico {
 				+ consumoEnergetico + ", peso=" + peso + "Kg " + "]";
 	}
 	
-	// probar commit
+	public int precioFinal() {
+		
+		// Aumento en funcion del consumo
+		switch (consumoEnerg) {
+			case ('A'):
+				this.precioBase += 100;
+				break;
+			case ('B'):
+				this.precioBase += 80;
+				break;
+			case ('C'):
+				this.precioBase += 60;
+				break;
+			case ('D'):
+				this.precioBase += 50;
+				break;
+			case ('E'):
+				this.precioBase += 30;
+				break;
+			case ('F'):
+				this.precioBase += 10;
+				break;
+		}
+		
+		// Aumento en funcion del peso
+		if (peso < 20) {
+			this.precioBase += 10;
+		}
+		else if (this.peso < 50) {
+			this.precioBase += 50;
+		}
+		else if (this.peso < 80) {
+			this.precioBase += 80;
+		}
+		else {
+			this.precioBase += 100;
+		}
+				
+		return precioBase;
+	}
 
 }
+
+
+
+
