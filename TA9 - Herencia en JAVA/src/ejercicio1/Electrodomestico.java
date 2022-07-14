@@ -131,7 +131,7 @@ public class Electrodomestico {
 	public void precioFinal() {
 		
 		// Aumento en funcion del consumo
-		switch (consumoEnergetico) {
+		switch (this.consumoEnergetico) {
 			case ('A'):
 				this.precioBase += 100;
 				break;

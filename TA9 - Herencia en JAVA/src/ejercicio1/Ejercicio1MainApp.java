@@ -31,7 +31,7 @@ public class Ejercicio1MainApp {
 		electrodomesticos[2] = microondas;
 		electrodomesticos[3] = tv1;
 		electrodomesticos[4] = tv2;
-		electrodomesticos[4] = tv3;
+		electrodomesticos[5] = tv3;
 		electrodomesticos[6] = tv4;
 		electrodomesticos[7] = lavadora1;
 		electrodomesticos[8] = lavadora2;
