@@ -1,6 +1,6 @@
 package ejercicio2;
 
-public class Serie {
+public class Serie implements Entregable {
 	
 	// Atributos de la clase
 	private String titulo;

@@ -1,6 +1,6 @@
 package ejercicio2;
 
-public class Videojuego {
+public class Videojuego implements Entregable {
 	
 	// Atributos de la clase
 	private String titulo;
