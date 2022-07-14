@@ -40,13 +40,4 @@ public class Lavadora extends Electrodomestico{
 		
 		super.precioFinal();
 	}
-
-	
-
-	
-
-	
-	
-	
-
 }
