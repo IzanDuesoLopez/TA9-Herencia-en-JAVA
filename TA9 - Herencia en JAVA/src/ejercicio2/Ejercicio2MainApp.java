@@ -76,7 +76,8 @@ public class Ejercicio2MainApp {
 				posicion_videojuego = i;
 			}
 		}
-		System.out.println(videojuegos[posicion_videojuego].toString());
+		System.out.println("Información del videojuego más jugado:\n"
+		+ videojuegos[posicion_videojuego].toString());
 	}
 	
 	public static void encontrarSerieMasTemporadas(Serie[] series) {
@@ -86,6 +87,7 @@ public class Ejercicio2MainApp {
 				posicion_serie = i;
 			}
 		}
-		System.out.println(series[posicion_serie].toString());
+		System.out.println("Información de la serie más vista:\n" 
+		+ series[posicion_serie].toString());
 	}
 }
