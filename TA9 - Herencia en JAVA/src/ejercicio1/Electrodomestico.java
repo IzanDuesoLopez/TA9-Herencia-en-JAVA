@@ -133,7 +133,7 @@ public class Electrodomestico {
 				+ consumoEnergetico + ", peso=" + peso + "Kg " + "]";
 	}
 	
-	public int precioFinal() {
+	public double precioFinal() {
 		
 		// Aumento en funcion del consumo
 		switch (consumoEnergetico) {
