@@ -29,4 +29,21 @@ public class Alumno extends Persona{
 			this.setFalta(true);
 		}
 	}
+
+	//Getter y Setter de Calificación
+	public int getCalificacion() {
+		return calificacion;
+	}
+
+	public void setCalificacion(int calificacion) {
+		this.calificacion = calificacion;
+	}
+
+	// Método toString de Alumno
+	@Override
+	public String toString() {
+		return "Alumno [calificacion=" + calificacion + ", nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo
+				+ ", falta=" + falta + "]";
+	}
+	
 }
