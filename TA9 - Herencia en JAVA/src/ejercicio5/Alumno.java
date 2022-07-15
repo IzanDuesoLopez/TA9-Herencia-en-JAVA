@@ -19,14 +19,14 @@ public class Alumno extends Persona{
 
 	// Método para comprobar si los estudiantes hacen novillos con un 50% de probabilidades
 	@Override
-	public boolean noEstaEnClase() {
+	public void noEstaEnClase() {
 
 		Random random = new Random();
 		
 		if(random.nextBoolean()) {
-			return true;
+			this.setFalta(false);
 		} else {
-			return false;
+			this.setFalta(true);
 		}
 	}
 }
