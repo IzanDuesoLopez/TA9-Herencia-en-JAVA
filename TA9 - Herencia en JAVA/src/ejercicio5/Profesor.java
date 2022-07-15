@@ -20,19 +20,19 @@ public class Profesor extends Persona {
 	public Profesor () {
 		this.edad = edad();
 		this.materia = generarMateria();
-		noEstaEnClase();
+		this.falta = noEstaEnClase();
 	}
 	
 	// Metodos
-	public void noEstaEnClase() {
+	public boolean noEstaEnClase() {
 		Random rdm = new Random();
 		
 		// Generamos un numero random
 		if ((int) (rdm.nextDouble() * 10 + 1) > 8) {
-			falta = true;
+			return true;
 		}
 		else {
-			falta = false;
+			return false;
 		}
 	}
 	
