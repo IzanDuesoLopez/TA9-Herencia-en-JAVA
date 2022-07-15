@@ -56,6 +56,10 @@ public abstract class Persona {
 	// Método abstracto que heredaran las clases hijas para comprobar si estan en clase
 	public abstract boolean noEstaEnClase();
 	
+
+	// Método abstracto para generar edad
+	public abstract int edad();
+
 	// Método que nos asigna si el alumno es hombre o mujer
 	public char esHombreOMujer() {
 
@@ -66,7 +70,6 @@ public abstract class Persona {
 		} else {
 			return 'M';
 		}
-
 	}
 	
 	// Para generar nombres masculinos random
