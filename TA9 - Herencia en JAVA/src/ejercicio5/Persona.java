@@ -1,5 +1,7 @@
 package ejercicio5;
 
+import java.util.Random;
+
 public abstract class Persona {
 	
 	// Atributos
@@ -54,5 +56,20 @@ public abstract class Persona {
 	
 	// Método abstracto que heredaran las clases hijas para comprobar si estan en clase
 	public abstract char esHombreOMujer();
-
+	
+	// Para generar nombres masculinos random
+	public String nombreMasculino () {
+		Random rdm = new Random();
+		String[] hombre = {"Jose", "Antonio", "Jesus", "Sergio", "Aitor"};
+			
+		return hombre[(int) (rdm.nextDouble() * hombre.length)];
+	}
+	
+	// Para generar nombres femeninos random
+	public String nombreFemenino () {
+		Random rdm = new Random();
+		String[] mujer = {"Maria", "Paula", "Cristina", "Sara", "Mireia"};
+			
+		return mujer[(int) (rdm.nextDouble() * mujer.length)];
+	}
 }
