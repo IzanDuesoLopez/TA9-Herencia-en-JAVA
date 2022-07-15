@@ -18,7 +18,7 @@ public class Aula {
 		this.materia = materia;
 		this.profesor = profesor;
 		this.alumnos = alumnos;
-		this.se_puede_dar_clase = darClase(alumnos);
+		this.se_puede_dar_clase = darClase(alumnos, profesor, materia);
 	}
 	
 	// Getters y setters
@@ -61,20 +61,28 @@ public class Aula {
 		this.se_puede_dar_clase = se_puede_dar_clase;
 	}
 	
-	// Métodos
-	public static boolean darClase(ArrayList<Alumno> alumnos) {
+	// Métodos 
+	public static boolean darClase(ArrayList<Alumno> alumnos, Profesor profesor, String materia) { //
 		int alumnos_presentes = 0;
 		for(Alumno alumno : alumnos) {
 			if(alumno != null) 
 				alumnos_presentes++;
 		}
-		if(alumnos_presentes >= alumnos.size() / 2)
+		if((profesor != null && profesor.getMateria().equals(materia) && alumnos_presentes >= alumnos.size() / 2))
 			return true;
 		
 		return false;
 	}
 	
-	public static void mostrarNumeroAprobados() {
+	public static void mostrarNumeroAprobados(ArrayList<Alumno> alumnos) {
+		int numero_alumnos = 0;
+		int numero_alumnas = 0;
+		for(Alumno alumno : alumnos) {
+			if(alumno.getSexo() == 'H') numero_alumnos++;
+			else if(alumno.getSexo() == 'M') numero_alumnas++;
+		}
+		System.out.println("Alumnos aprobados: " + numero_alumnos);
+		System.out.println("Alumnas aprobadas: " + numero_alumnas);
 		
 	}
 }
