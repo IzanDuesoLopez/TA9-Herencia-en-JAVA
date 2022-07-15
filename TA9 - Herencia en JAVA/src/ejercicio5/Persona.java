@@ -19,9 +19,8 @@ public abstract class Persona {
 	}
 	
 	// Constructor con todos los parámetros menos falta
-	public Persona(String nombre, int edad) {
+	public Persona(String nombre) {
 		this.nombre = nombre;
-		this.edad = edad;
 		this.falta = false;
 	}
 
