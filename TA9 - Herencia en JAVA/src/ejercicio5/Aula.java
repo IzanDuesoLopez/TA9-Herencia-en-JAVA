@@ -9,6 +9,7 @@ public class Aula {
 	private String materia;
 	private Profesor profesor;
 	private ArrayList<Alumno> alumnos;
+	private boolean se_puede_dar_clase;
 	
 	// Constructor
 	public Aula(int identificador, int maximo_estudiantes, String materia, Profesor profesor, ArrayList<Alumno> alumnos) {
@@ -17,6 +18,7 @@ public class Aula {
 		this.materia = materia;
 		this.profesor = profesor;
 		this.alumnos = alumnos;
+		this.se_puede_dar_clase = darClase(alumnos);
 	}
 	
 	// Getters y setters
@@ -51,7 +53,28 @@ public class Aula {
 		this.alumnos = alumnos;
 	}
 	
+	public boolean isSe_puede_dar_clase() {
+		return se_puede_dar_clase;
+	}
+
+	public void setSe_puede_dar_clase(boolean se_puede_dar_clase) {
+		this.se_puede_dar_clase = se_puede_dar_clase;
+	}
 	
+	// Métodos
+	public static boolean darClase(ArrayList<Alumno> alumnos) {
+		int alumnos_presentes = 0;
+		for(Alumno alumno : alumnos) {
+			if(alumno != null) 
+				alumnos_presentes++;
+		}
+		if(alumnos_presentes >= alumnos.size() / 2)
+			return true;
+		
+		return false;
+	}
 	
-	
+	public static void mostrarNumeroAprobados() {
+		
+	}
 }
