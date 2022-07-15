@@ -2,7 +2,6 @@ package ejercicio5;
 
 public abstract class Persona {
 	
-<<<<<<< HEAD
 	// Atributos
 	protected String nombre;
 	protected int edad;
@@ -33,11 +32,7 @@ public abstract class Persona {
 		this.falta = falta;
 	}
 	
-	
-
-=======
-	
 	// Método abstracto que heredaran las clases hijas para comprobar si estan en clase
 	public abstract boolean noEstaEnClase();
->>>>>>> branch 'main' of https://github.com/IzanDuesoLopez/TA9-Herencia-en-JAVA
+
 }
