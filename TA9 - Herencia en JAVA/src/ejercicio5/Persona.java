@@ -7,6 +7,23 @@ public abstract class Persona {
 	protected int edad;
 	protected char sexo;
 	protected boolean falta;
+	
+	// Constructor por defecto
+	public Persona() {
+		this.nombre = "";
+		this.edad = 0;
+		this.sexo = '0';
+		this.falta = false;
+	}
+	
+	// Constructor con todos los parámetros
+	public Persona(String nombre, int edad, char sexo, boolean falta) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.sexo = sexo;
+		this.falta = falta;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
