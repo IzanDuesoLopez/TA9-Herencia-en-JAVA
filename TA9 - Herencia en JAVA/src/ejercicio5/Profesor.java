@@ -52,6 +52,12 @@ public class Profesor extends Persona {
 
 	@Override
 	public char esHombreOMujer() {
+		Random random = new Random();
 
+		if (random.nextBoolean()) {
+			return 'H';
+		} else {
+			return 'M';
+		}
 	}
 }

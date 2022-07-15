@@ -2,10 +2,10 @@ package ejercicio5;
 
 import java.util.Random;
 
-public class Alumno extends Persona{
-	
+public class Alumno extends Persona {
+
 	private int calificacion;
-	
+
 	// Constructor por default de Alumno
 	public Alumno() {
 		this.calificacion = 0;
@@ -18,29 +18,34 @@ public class Alumno extends Persona{
 		this.calificacion = calificacion;
 	}
 
-	// Método para comprobar si los estudiantes hacen novillos con un 50% de probabilidades
+	// Método para comprobar si los estudiantes hacen novillos con un 50% de
+	// probabilidades
 	@Override
 	public boolean noEstaEnClase() {
 
 		Random random = new Random();
-		
-		if(random.nextBoolean()) {
+
+		if (random.nextBoolean()) {
 			return true;
 		} else {
 			return false;
 		}
 	}
-	
-	
+
 	@Override
 	public char esHombreOMujer() {
-		
-		
-		
-	}
-	
 
-	//Getter y Setter de Calificación
+		Random random = new Random();
+
+		if (random.nextBoolean()) {
+			return 'H';
+		} else {
+			return 'M';
+		}
+
+	}
+
+	// Getter y Setter de Calificación
 	public int getCalificacion() {
 		return calificacion;
 	}
@@ -56,6 +61,4 @@ public class Alumno extends Persona{
 				+ ", falta=" + falta + "]";
 	}
 
-	
-	
 }
