@@ -4,24 +4,35 @@ public class Ejercicio4MainApp {
 	
 	public static void main(String[] args) {
 		
-
-		Raices raiz = new Raices (9, -8, 1);
-		raiz.getDiscriminante();
+		// Probamos el método con una solución doble
+		Raices raiz = new Raices (1, -2, 1);
+		System.out.print("La ecuación a resolver es:  x^2 + -2x + 1 = 0");
+		System.out.print("El discriminante de la raíz es: " + raiz.getDiscriminante());
+		System.out.print("¿Tiene dos soluciones la ecuación?" + raiz.tieneRaices());
+		System.out.print("¿Tiene la ecuación una única solución?" + raiz.tieneRaiz());
+		raiz.calcular();
+		raiz.obtenerRaices();
+		raiz.obtenerRaiz();
 		
-		Raices raiz1 = new Raices (10, -4, 2);
-		raiz1.tieneRaices();
+		// Probamos el método con dos soluciones
+		Raices raiz1 = new Raices (2, -7, 3);
+		System.out.print("La ecuación a resolver es:  2x^2 + -7x + 3 = 0");
+		System.out.print("El discriminante de la raíz es: " + raiz1.getDiscriminante());
+		System.out.print("¿Tiene dos soluciones la ecuación?" + raiz1.tieneRaices());
+		System.out.print("¿Tiene la ecuación una única solución?" + raiz1.tieneRaiz());
+		raiz1.calcular();
+		raiz1.obtenerRaices();
+		raiz1.obtenerRaiz();
 		
-		Raices raiz2 = new Raices (7, 5, 4);
-		raiz2.tieneRaiz();
-		
-		Raices raiz3 = new Raices (8, -2, 3);
-		raiz3.calcular();
-		
-		Raices raiz4 = new Raices (7, 13, 3);
-		raiz4.obtenerRaices();
-		
-		Raices raiz5 = new Raices (13, -22, 10);
-		raiz5.obtenerRaiz();
+		// Probamos el método sin solucion
+		Raices raiz2 = new Raices (1, 1, 1);
+		System.out.print("La ecuación a resolver es:  x^2 + x + 1 = 0");
+		System.out.print("El discriminante de la raiz es: " + raiz2.getDiscriminante());
+		System.out.print("¿Tiene dos soluciones la ecuación?" + raiz2.tieneRaices());
+		System.out.print("¿Tiene la ecuación una única solución?" + raiz2.tieneRaiz());
+		raiz2.calcular();
+		raiz2.obtenerRaices());
+		raiz2.obtenerRaiz();
 		
 	}
 
