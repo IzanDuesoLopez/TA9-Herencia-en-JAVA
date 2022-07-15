@@ -6,17 +6,11 @@ public class Alumno extends Persona {
 
 	private int calificacion;
 
-	// Constructor por default de Alumno
+	// Constructor con todos los parámetros generados aleatoriamente
 	public Alumno() {
-		this.calificacion = 0;
-	}
-
-	// Constructor con todos los parámetros
-	public Alumno(String nombre) {
-		super(nombre);
 		this.falta = noEstaEnClase();
 		this.calificacion = generarCalificacion();
-		this.edad = generarEdadAlumno();
+		this.edad = edad();
 	}
 
 	// Método para comprobar si los estudiantes hacen novillos con un 50% de
@@ -47,7 +41,8 @@ public class Alumno extends Persona {
 	}
 
 	// Método que genera un número aleatorio entre 0 y 10
-	public int generarEdadAlumno() {
+	@Override
+	public int edad() {
 
 		Random random = new Random();
 		int edadMinima = 16;
@@ -74,5 +69,6 @@ public class Alumno extends Persona {
 		return "Alumno [calificacion=" + calificacion + ", nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo
 				+ ", falta=" + falta + "]";
 	}
+
 
 }

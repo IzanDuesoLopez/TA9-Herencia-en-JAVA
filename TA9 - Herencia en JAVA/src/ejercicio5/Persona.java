@@ -10,21 +10,15 @@ public abstract class Persona {
 	protected char sexo;
 	protected boolean falta;
 	
-	// Constructor por defecto
+	// Constructor por defecto con valores aleatorios menos la edad y falta
 	public Persona() {
-		this.nombre = "";
+		this.falta = false;
 		this.edad = 0;
-		this.sexo = '0';
-		this.falta = false;
-	}
-	
-	// Constructor con todos los parámetros menos falta
-	public Persona(String nombre) {
-		//this.nombre = nombre;
-		this.falta = false;
 		this.sexo = esHombreOMujer();
 		if(sexo == 'H') {
 			this.nombre = nombreMasculino();
+		} else {
+			this.nombre = nombreFemenino();
 		}
 	}
 
@@ -77,7 +71,7 @@ public abstract class Persona {
 		Random rdm = new Random();
 		String[] hombre = {"Izan", "Dani", "Michael", "Jose", "Pablo", "Alberto"};
 			
-		return hombre[(rdm.nextInt() * hombre.length)];
+		return hombre[(int) (rdm.nextDouble() * hombre.length)];
 	}
 	
 	// Para generar nombres femeninos random
@@ -85,6 +79,6 @@ public abstract class Persona {
 		Random rdm = new Random();
 		String[] mujer = {"Tiffany", "Barbara", "Cami", "Regina", "Antonia", "Gloria"};
 			
-		return mujer[(rdm.nextInt() * mujer.length)];
+		return mujer[(int) (rdm.nextDouble() * mujer.length)];
 	}
 }
