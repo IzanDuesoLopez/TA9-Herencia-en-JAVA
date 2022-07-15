@@ -45,7 +45,7 @@ public class Profesor extends Persona {
 	private String generarMateria() {
 		Random rnd = new Random();
 		// Un array donde esten las materias
-		String[] nombreMateria = { "Matematicas", "Filosofia", "Fisica" };
+		String[] nombreMateria = { "matemáticas", "filosofía", "física" };
 		// Genero un numero random en funcion del array
 		return nombreMateria[(int) (rnd.nextDouble() * nombreMateria.length)];
 	}

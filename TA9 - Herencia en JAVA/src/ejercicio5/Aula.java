@@ -84,13 +84,14 @@ public class Aula {
 			if(alumno != null) 
 				alumnos_presentes++;
 		}
+		
 		if(!(profesor != null)) {
 			System.out.println("No se puede dar clase. No hay profesor.");
 			return false;
 		} else if(!(profesor.getMateria().equals(materia))) {
 			System.out.println("No se puede dar clase. El profesor no da la materia correspondiente.");
 			return false;
-		} else if(alumnos_presentes < alumnos.size() / 2) {
+		} else if(alumnos_presentes < maximo_estudiantes / 2) {
 			System.out.println("No se puede dar clase. Hay " + alumnos.size() + " alumnos de los " + maximo_estudiantes + " máximos.");
 			return false;
 		}
@@ -136,10 +137,9 @@ public class Aula {
 	
 	public void generar_alumnos() {
 		//(int)(Math.random() * (max - min)) + min;
-		int numero_estudiantes = (int)(Math.random() * this.maximo_estudiantes);
-		for(int i = 0; i < numero_estudiantes; i++) {
+		for(int i = 0; i < this.maximo_estudiantes; i++) {
 			Alumno alumno = new Alumno();
-			this.alumnos.add(alumno);
+			if(alumno.isFalta()) this.alumnos.add(alumno);
 		}
 	}
 }
