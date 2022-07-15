@@ -35,5 +35,4 @@ public class Ejercicio3MainApp {
 					+ libroDos.getNumero_paginas() + " páginas");
 		}
 	}
-
 }
