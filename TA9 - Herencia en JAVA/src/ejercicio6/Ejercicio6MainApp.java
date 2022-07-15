@@ -2,7 +2,7 @@ package ejercicio6;
 
 import java.util.Iterator;
 
-public class Ejercicio5MainApp {
+public class Ejercicio6MainApp {
 
 	public static void main(String[] args) {
 		
