@@ -69,6 +69,6 @@ public abstract class Persona {
 		Random rdm = new Random();
 		String[] mujer = {"Maria", "Paula", "Cristina", "Sara", "Mireia"};
 			
-		return mujer[(int) (rdm.nextDouble() * mujer.length)];
+		return mujer[(rdm.nextInt() * mujer.length)];
 	}
 }
