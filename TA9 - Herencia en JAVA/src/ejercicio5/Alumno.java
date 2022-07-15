@@ -16,7 +16,6 @@ public class Alumno extends Persona {
 		super(nombre);
 		this.falta = noEstaEnClase();
 		this.calificacion = generarCalificacion();
-		this.sexo = esHombreOMujer();
 		this.edad = generarEdadAlumno();
 	}
 
@@ -32,20 +31,6 @@ public class Alumno extends Persona {
 		} else {
 			return false;
 		}
-	}
-
-	// Método que nos asigna si el alumno es hombre o mujer
-	@Override
-	public char esHombreOMujer() {
-
-		Random random = new Random();
-
-		if (random.nextBoolean()) {
-			return 'H';
-		} else {
-			return 'M';
-		}
-
 	}
 
 	// Método que genera un número aleatorio entre 0 y 10
