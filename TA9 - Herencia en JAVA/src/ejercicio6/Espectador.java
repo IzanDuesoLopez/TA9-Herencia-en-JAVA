@@ -54,7 +54,7 @@ public class Espectador {
 		return apto;
 	}
 	
-	public boolean compraEntrada (Cine cine) {
+	public boolean compraEntrada(Cine cine) {
 		if (cine.getprecioEntrada() > getDinero()) {
 			return false;
 		} else {
