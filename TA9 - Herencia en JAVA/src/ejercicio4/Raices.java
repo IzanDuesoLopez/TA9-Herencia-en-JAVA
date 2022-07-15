@@ -1,11 +1,5 @@
 package ejercicio4;
-/* getDiscriminante si
- * tieneRaices
- * tieneRaiz
- * calcular
- * obtenerRaices
- * obtenerRaiz
- */
+
 public class Raices {
 	
 	private double a;
@@ -48,18 +42,11 @@ public class Raices {
 	
 	// Método calcular
 	public void calcular() {
-		double resultado;
-		// Si solo tiene una solución
-		if(this.getDiscriminante() >= 0) {
-			if(this.getDiscriminante() == 0) {
-				// Calculamos la solución y la mostramos por pantalla
-				resultado = ((-b) - (4 * a * c)) / (2 * a);
-				System.out.println("Resultado: " + resultado);
-			// Si tiene 2 soluciones
-			} else if(this.getDiscriminante() > 0) {
-				//((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);	
-			}
-		}else {
+		if(tieneRaices()) {
+			obtenerRaices();
+		} else if(tieneRaiz()) {
+			obtenerRaiz();
+		} else {
 			System.out.println("¡No tiene solución!");
 		}
 	}
