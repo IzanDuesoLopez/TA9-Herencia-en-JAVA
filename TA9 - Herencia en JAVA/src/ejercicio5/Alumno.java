@@ -46,5 +46,11 @@ public class Alumno extends Persona{
 		return "Alumno [calificacion=" + calificacion + ", nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo
 				+ ", falta=" + falta + "]";
 	}
+
+	@Override
+	public boolean esHombreOMujer() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 }

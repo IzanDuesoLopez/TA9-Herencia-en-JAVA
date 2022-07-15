@@ -50,4 +50,10 @@ public class Profesor extends Persona {
 			// Genero un numero random en funcion del array
 			return nombreMateria[(int) (rnd.nextDouble() * nombreMateria.length)];
 		}
+
+		@Override
+		public boolean esHombreOMujer() {
+			// TODO Auto-generated method stub
+			return false;
+		}
 }
