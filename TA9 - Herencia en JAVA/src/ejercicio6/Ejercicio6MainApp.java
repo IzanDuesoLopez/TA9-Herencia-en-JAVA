@@ -10,7 +10,7 @@ public class Ejercicio6MainApp {
 		final int TAM_FILAS = 8;
 		final int TAM_COLS = 8;
 
-		String salaCine[][] = new String[TAM_FILAS][TAM_COLS];
+		String salaCine[][] = new String[TAM_FILAS][TAM_COLS]; 
 		boolean estaOcupado[][] = new boolean[TAM_FILAS][TAM_COLS];
 		char abecedario[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
 				'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
