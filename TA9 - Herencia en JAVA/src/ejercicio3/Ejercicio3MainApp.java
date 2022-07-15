@@ -9,8 +9,8 @@ public class Ejercicio3MainApp {
 		Libro libroDos = new Libro("ISBN 0-4635-7941-1", "Head First Java", "Kathy Sierra", 532);
 
 		// Los mostramos por pantalla
-		System.out.println(libroUno.toString());
-		System.out.println(libroDos.toString());
+		System.out.println(libroUno.toString() + "\n");
+		System.out.println(libroDos.toString() + "\n");
 		
 		compararPaginas(libroUno, libroDos);
 
