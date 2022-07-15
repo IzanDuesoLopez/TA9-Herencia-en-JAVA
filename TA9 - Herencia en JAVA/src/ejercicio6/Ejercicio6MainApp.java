@@ -21,7 +21,7 @@ public class Ejercicio6MainApp {
 		inicializarSalaCine(salaCine, estaOcupado, abecedario); // Inicializamos la matriz que contiene la información de la sala de cine
 		mostrarSalaCine(salaCine, estaOcupado, abecedario); // Mostramos la sala de cine
 
-		// Seleccionamos asiento
+		// Seleccionamos asiento para el espectador
 		System.out.println("Selecciona posicion");
 		Scanner sc = new Scanner(System.in);
 		String asiento = sc.next();
