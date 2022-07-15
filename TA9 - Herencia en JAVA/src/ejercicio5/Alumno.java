@@ -12,21 +12,22 @@ public class Alumno extends Persona{
 	}
 
 	// Constructor con todos los parámetros
-	public Alumno(String nombre, int edad, char sexo, boolean falta, int calificacion) {
-		super(nombre, edad, sexo, falta);
+	public Alumno(String nombre, int edad, char sexo, int calificacion) {
+		super(nombre, edad, sexo);
+		this.falta = noEstaEnClase();
 		this.calificacion = calificacion;
 	}
 
 	// Método para comprobar si los estudiantes hacen novillos con un 50% de probabilidades
 	@Override
-	public void noEstaEnClase() {
+	public boolean noEstaEnClase() {
 
 		Random random = new Random();
 		
 		if(random.nextBoolean()) {
-			this.setFalta(false);
+			return true;
 		} else {
-			this.setFalta(true);
+			return false;
 		}
 	}
 

@@ -16,12 +16,12 @@ public abstract class Persona {
 		this.falta = false;
 	}
 	
-	// Constructor con todos los parámetros
-	public Persona(String nombre, int edad, char sexo, boolean falta) {
+	// Constructor con todos los parámetros menos falta
+	public Persona(String nombre, int edad, char sexo) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sexo = sexo;
-		this.falta = falta;
+		this.falta = false;
 	}
 
 	public String getNombre() {
@@ -50,6 +50,6 @@ public abstract class Persona {
 	}
 	
 	// Método abstracto que heredaran las clases hijas para comprobar si estan en clase
-	public abstract void noEstaEnClase();
+	public abstract boolean noEstaEnClase();
 
 }
