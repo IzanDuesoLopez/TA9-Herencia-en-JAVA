@@ -78,8 +78,8 @@ public class Aula {
 		int numero_alumnos = 0;
 		int numero_alumnas = 0;
 		for(Alumno alumno : alumnos) {
-			if(alumno.getSexo() == 'H') numero_alumnos++;
-			else if(alumno.getSexo() == 'M') numero_alumnas++;
+			if(alumno.getSexo() == 'H' && alumno.getCalificacion() >= 5) numero_alumnos++;
+			else if(alumno.getSexo() == 'M' && alumno.getCalificacion() >= 5) numero_alumnas++;
 		}
 		System.out.println("Alumnos aprobados: " + numero_alumnos);
 		System.out.println("Alumnas aprobadas: " + numero_alumnas);
