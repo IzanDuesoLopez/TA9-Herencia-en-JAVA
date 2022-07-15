@@ -20,9 +20,12 @@ public abstract class Persona {
 	
 	// Constructor con todos los parámetros menos falta
 	public Persona(String nombre) {
-		this.nombre = nombre;
+		//this.nombre = nombre;
 		this.falta = false;
 		this.sexo = esHombreOMujer();
+		if(sexo == 'H') {
+			this.nombre = nombreMasculino();
+		}
 	}
 
 	public String getNombre() {
