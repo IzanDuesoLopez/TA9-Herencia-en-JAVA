@@ -12,10 +12,11 @@ public class Alumno extends Persona {
 	}
 
 	// Constructor con todos los parámetros
-	public Alumno(String nombre, int edad, char sexo, int calificacion) {
-		super(nombre, edad, sexo);
+	public Alumno(String nombre, int edad) {
+		super(nombre, edad);
 		this.falta = noEstaEnClase();
-		this.calificacion = calificacion;
+		this.calificacion = generarCalificacion();
+		this.sexo = esHombreOMujer();
 	}
 
 	// Método para comprobar si los estudiantes hacen novillos con un 50% de
@@ -32,6 +33,7 @@ public class Alumno extends Persona {
 		}
 	}
 
+	// Método que nos asigna si el alumno es hombre o mujer
 	@Override
 	public char esHombreOMujer() {
 
@@ -43,6 +45,19 @@ public class Alumno extends Persona {
 			return 'M';
 		}
 
+	}
+	
+	// Método que genera un número aleatorio entre 0 y 10
+	public int generarCalificacion() {
+		
+		Random random = new Random();
+		int notaMinima = 0;
+		int notaMaxima = 10;
+		
+		int calificacionAleatoria = random.nextInt((notaMaxima - notaMinima) + 1) + notaMinima;
+		
+		return calificacionAleatoria;
+		
 	}
 
 	// Getter y Setter de Calificación
