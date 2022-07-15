@@ -58,7 +58,7 @@ public abstract class Persona {
 	// Para generar nombres masculinos random
 	public String nombreMasculino () {
 		Random rdm = new Random();
-		String[] hombre = {"Jose", "Antonio", "Jesus", "Sergio", "Aitor"};
+		String[] hombre = {"Izan", "Dani", "Michael", "Jose", "Pablo", "Alberto"};
 			
 		return hombre[(rdm.nextInt() * hombre.length)];
 	}
@@ -66,7 +66,7 @@ public abstract class Persona {
 	// Para generar nombres femeninos random
 	public String nombreFemenino () {
 		Random rdm = new Random();
-		String[] mujer = {"Maria", "Paula", "Cristina", "Sara", "Mireia"};
+		String[] mujer = {"Tiffany", "Barbara", "Cami", "Regina", "Antonia", "Gloria"};
 			
 		return mujer[(rdm.nextInt() * mujer.length)];
 	}
