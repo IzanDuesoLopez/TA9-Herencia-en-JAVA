@@ -31,7 +31,7 @@ public class Ejercicio4MainApp {
 		System.out.print("¿Tiene dos soluciones la ecuación?" + raiz2.tieneRaices());
 		System.out.print("¿Tiene la ecuación una única solución?" + raiz2.tieneRaiz());
 		raiz2.calcular();
-		raiz2.obtenerRaices());
+		raiz2.obtenerRaices();
 		raiz2.obtenerRaiz();
 		
 	}
