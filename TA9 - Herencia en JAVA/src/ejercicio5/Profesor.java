@@ -20,20 +20,20 @@ public class Profesor extends Persona {
 	public Profesor () {
 		this.edad = edad();
 		this.materia = generarMateria();
-		this.falta = ausencia();
+		noEstaEnClase();
 	}
 	
 	// Metodos
-	public boolean ausencia() {
+	public void noEstaEnClase() {
 		Random rdm = new Random();
-		boolean falta = false;
 		
 		// Generamos un numero random
 		if ((int) (rdm.nextDouble() * 10 + 1) > 8) {
 			falta = true;
 		}
-		
-		return falta;
+		else {
+			falta = false;
+		}
 	}
 	
 	// Genero su edad random
@@ -50,6 +50,4 @@ public class Profesor extends Persona {
 			// Genero un numero random en funcion del array
 			return nombreMateria[(int) (rnd.nextDouble() * nombreMateria.length)];
 		}
-	
-	
 }
