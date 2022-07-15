@@ -1,6 +1,7 @@
 package ejercicio6;
 
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class Ejercicio6MainApp {
 
@@ -17,7 +18,22 @@ public class Ejercicio6MainApp {
 		System.out.println("Las casillas marcadas con una X estan ocupadas, elige tu sitio a continuación: \n");
 		inicializarSalaCine(salaCine, estaOcupado, abecedario);
 		mostrarSalaCine(salaCine, estaOcupado, abecedario);
+		
+		System.out.println("Selecciona posicion");
+		Scanner sc = new Scanner(System.in);
+		String asiento = sc.next();
+		
+		boolean noValido = false;
+		for (int fil = 0; fil < salaCine.length; fil++) {
+			for (int col = 0; col < salaCine[fil].length; col++) {
+				if(asiento.equals(salaCine[fil][col]) && estaOcupado[fil][col] == false) {
+					estaOcupado[fil][col] = true;
+				}
+			}
+		}
 
+		mostrarSalaCine(salaCine, estaOcupado, abecedario);
+		
 	}
 
 	// Método que
