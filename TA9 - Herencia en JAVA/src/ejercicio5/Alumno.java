@@ -30,6 +30,15 @@ public class Alumno extends Persona{
 			return false;
 		}
 	}
+	
+	
+	@Override
+	public char esHombreOMujer() {
+		
+		
+		
+	}
+	
 
 	//Getter y Setter de Calificación
 	public int getCalificacion() {
@@ -47,10 +56,6 @@ public class Alumno extends Persona{
 				+ ", falta=" + falta + "]";
 	}
 
-	@Override
-	public boolean esHombreOMujer() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 	
 }

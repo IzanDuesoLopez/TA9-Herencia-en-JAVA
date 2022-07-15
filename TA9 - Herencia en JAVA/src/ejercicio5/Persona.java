@@ -53,6 +53,6 @@ public abstract class Persona {
 	public abstract boolean noEstaEnClase();
 	
 	// Método abstracto que heredaran las clases hijas para comprobar si estan en clase
-	public abstract boolean esHombreOMujer();
+	public abstract char esHombreOMujer();
 
 }
