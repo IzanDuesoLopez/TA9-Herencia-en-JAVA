@@ -22,6 +22,7 @@ public abstract class Persona {
 	public Persona(String nombre) {
 		this.nombre = nombre;
 		this.falta = false;
+		this.sexo = esHombreOMujer();
 	}
 
 	public String getNombre() {
@@ -52,11 +53,26 @@ public abstract class Persona {
 	// Método abstracto que heredaran las clases hijas para comprobar si estan en clase
 	public abstract boolean noEstaEnClase();
 	
+<<<<<<< HEAD
 	// Método abstracto para generar edad
 	public abstract int edad();
 	
 	// Método abstracto que heredaran las clases hijas para comprobar si estan en clase
 	public abstract char esHombreOMujer();
+=======
+	// Método que nos asigna si el alumno es hombre o mujer
+	public char esHombreOMujer() {
+
+		Random random = new Random();
+
+		if (random.nextBoolean()) {
+			return 'H';
+		} else {
+			return 'M';
+		}
+
+	}
+>>>>>>> branch 'main' of https://github.com/IzanDuesoLopez/TA9-Herencia-en-JAVA
 	
 	// Para generar nombres masculinos random
 	public String nombreMasculino () {
