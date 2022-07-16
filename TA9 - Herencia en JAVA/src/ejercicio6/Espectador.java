@@ -56,7 +56,7 @@ public class Espectador {
 	
 	// Método comprar entrada, que comprueba si el espectador tiene suficiente dinero para poder ver la pelicula
 	public boolean compraEntrada(Cine cine) {
-		if (cine.getprecioEntrada() > this.getDinero()) {
+		if (cine.getPrecioEntrada() > this.getDinero()) {
 			return false;
 		} else {
 			return true;
