@@ -21,7 +21,7 @@ public class Ejercicio6MainApp {
 		System.out.println("Las casillas marcadas con una X estan ocupadas, elige tu sitio a continuación: \n");
 		inicializarSalaCine(salaCine, estaOcupado, abecedario); // Inicializamos la matriz que contiene la información de la sala de cine
 		mostrarSalaCine(salaCine, estaOcupado, abecedario); // Mostramos la sala de cine
-
+		
 		// Seleccionamos asiento para el espectador
 		Random random = new Random();
 		int filaAleatoria = random.nextInt((7 - 0) + 1) + 0;
