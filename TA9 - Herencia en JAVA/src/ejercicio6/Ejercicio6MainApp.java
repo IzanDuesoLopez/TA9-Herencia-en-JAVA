@@ -1,6 +1,7 @@
 package ejercicio6;
 
 import java.util.Iterator;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio6MainApp {
@@ -22,20 +23,15 @@ public class Ejercicio6MainApp {
 		mostrarSalaCine(salaCine, estaOcupado, abecedario); // Mostramos la sala de cine
 
 		// Seleccionamos asiento para el espectador
-		System.out.println("Selecciona posicion");
-		Scanner sc = new Scanner(System.in);
-		String asiento = sc.next();
+		Random random = new Random();
+		int filaAleatoria = random.nextInt((7 - 0) + 1) + 0;
+		int colAleatoria = random.nextInt((7 - 0) + 1) + 0;
 		
-		// Recorremos la sala del cine
-		for (int fil = 0; fil < salaCine.length; fil++) {
-			for (int col = 0; col < salaCine[fil].length; col++) {
-				// Si el asiento existe y no esta ocupado
-				if (asiento.equals(salaCine[fil][col]) && estaOcupado[fil][col] == false) {
-					estaOcupado[fil][col] = true; // El asiento se ocupa ya que el espectador se sienta
-				}
-			}
+		System.out.println("Fila random = " +  filaAleatoria + "Col random =  " + colAleatoria);
+		if (estaOcupado[filaAleatoria][colAleatoria] == false) {
+			estaOcupado[filaAleatoria][colAleatoria] = true; // El asiento se ocupa ya que el espectador se sienta
 		}
-		
+
 		mostrarSalaCine(salaCine, estaOcupado, abecedario); // Mostramos la sala de cine
 	}
 
