@@ -12,24 +12,24 @@ public class Ejercicio3MainApp {
 		System.out.println(libroUno.toString() + "\n");
 		System.out.println(libroDos.toString() + "\n");
 		
-		compararPaginas(libroUno, libroDos);
+		compararPaginas(libroUno, libroDos); // Llamamos al método compararPaginas que recibe por parámetro los dos libros
 
 	}
 
 	// Cuál de los dos libros tiene más páginas:
 	public static void compararPaginas(Libro libroUno, Libro libroDos) {
 
-		if (libroUno.getNumero_paginas() > libroDos.getNumero_paginas()) {
+		if (libroUno.getNumero_paginas() > libroDos.getNumero_paginas()) { // Si el primer libro tiene más páginas que el segundo
 			System.out.println(
 					libroUno.getTitulo() + " con " + libroUno.getNumero_paginas() + " páginas tiene más páginas que "
 							+ libroDos.getTitulo() + " con " + libroDos.getNumero_paginas() + " páginas");
 
-		} else if (libroUno.getNumero_paginas() < libroDos.getNumero_paginas()) {
+		} else if (libroUno.getNumero_paginas() < libroDos.getNumero_paginas()) { // Si el segundo libro tiene más páginas que el primero
 			System.out.println(
 					libroDos.getTitulo() + " con " + libroDos.getNumero_paginas() + " páginas tiene más páginas que "
 							+ libroUno.getTitulo() + " con " + libroUno.getNumero_paginas() + " páginas");
 
-		} else {
+		} else { // Si tienen las mismas páginas
 			System.out.println(libroUno.getTitulo() + " con " + libroUno.getNumero_paginas()
 					+ " páginas tiene las mismas páginas que " + libroDos.getTitulo() + " con "
 					+ libroDos.getNumero_paginas() + " páginas");
