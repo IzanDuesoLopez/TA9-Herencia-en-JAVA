@@ -84,7 +84,7 @@ public class Cine {
 		}
 		for(int i = 0; i < this.getFilas(); i++) {
 			for(int j = 0; j < this.getColumnas(); j++) {
-				if(!(this.getSala()[i][j].getEspectador()!=null)) {
+				if(!(this.getSala()[i][j].getEspectador() != null)) {
 					flag = true;
 					System.out.println("Hay sitio para sentarse.");
 					break;
