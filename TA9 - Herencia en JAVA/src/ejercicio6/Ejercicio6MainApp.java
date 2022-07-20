@@ -21,6 +21,8 @@ public class Ejercicio6MainApp {
 		// Este espectador no tiene ni el dinero necesario ni la edad para poder ver la película
 		Espectador espectador4 = new Espectador("Alba", 12, 2);
 		
+		/* Creamos el array de espectadores para llamar a las funciones comprobarSentarse, sentarEspectador
+		   y mostrarSala */
 		Espectador[] cola = {espectador1, espectador2, espectador3, espectador4};
 		for(int i = 0; i < cola.length; i++) {
 			if(cine.comprobarSentarse(cola[i]))
