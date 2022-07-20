@@ -3,7 +3,7 @@ package ejercicio6;
 public class Ejercicio6MainApp {
 
 	public static void main(String[] args) {
-		pelicula1();
+		pelicula1(); // Llámamos al método con la funcionalidad del cine
 		
 	}
 	
@@ -25,9 +25,9 @@ public class Ejercicio6MainApp {
 		   y mostrarSala */
 		Espectador[] cola = {espectador1, espectador2, espectador3, espectador4};
 		for(int i = 0; i < cola.length; i++) {
-			if(cine.comprobarSentarse(cola[i]))
-				cine.sentarEspectador(cola[i]);
-			cine.mostrarSala();
+			if(cine.comprobarSentarse(cola[i])) // Comprobamos si nos podemos sentar
+				cine.sentarEspectador(cola[i]); // Si nos podemos sentar nos sentamos
+			cine.mostrarSala(); // Mostramos la sala de cine con los diferentes asientos
 		}	
 	}
 }

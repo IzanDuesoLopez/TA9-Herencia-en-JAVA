@@ -7,11 +7,11 @@ public class Cine {
 	// Atributos
 	private Pelicula pelicula;
 	private double precio_entrada;
-	private Asiento[][] sala;
+	private Asiento[][] sala; // Matriz de objetos asiento en los cuales sentaremos a los diferentes espectadores
 	private int filas;
 	private int columnas;
 	
-	// Constructor
+	// Constructor que recibe por parametro una instancia de pelicula, el precio, número de filas y columnas
 	public Cine(Pelicula pelicula, double precio_entrada, int filas, int columnas) {
 		this.pelicula = pelicula;
 		this.precio_entrada = precio_entrada;
@@ -24,7 +24,7 @@ public class Cine {
 			for(int j = 0; j < columnas; j++) {
 				String numeracion_asiento = "" + i + caracteres.charAt(j);
 				Asiento asiento = new Asiento(numeracion_asiento);
-				sala[i - 1][j] = asiento;
+				sala[i - 1][j] = asiento; // Asignamos el asiento
 				System.out.print(sala[i - 1][j].getNombre() + " ");
 			}
 			System.out.println("");
@@ -110,6 +110,7 @@ public class Cine {
 		int posicion_y;
 		boolean sentado = false;
 		
+		// Mientras no este sentado
 		while(!sentado) {
 			//(int)(Math.random() * (max - min)) + min;
 			posicion_x = (int)(Math.random() * (this.getFilas() - 1));
@@ -129,9 +130,9 @@ public class Cine {
 		for(int i = this.getFilas(); i > 0; i--) {
 			for(int j = 0; j < this.getColumnas(); j++) {
 				if(this.getSala()[i - 1][j].getEspectador() != null) {
-					System.out.print("[X]");
+					System.out.print("[X]"); // Esta ocupada
 				} else {
-					System.out.print("[ ]");
+					System.out.print("[ ]"); // Esta vacia
 				}
 			}
 			System.out.println("");
