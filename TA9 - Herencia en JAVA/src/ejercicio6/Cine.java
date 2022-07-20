@@ -86,16 +86,16 @@ public class Cine {
 			for(int j = 0; j < this.getColumnas(); j++) {
 				if(!(this.getSala()[i][j].getEspectador() != null)) {
 					flag = true;
-					System.out.println("Hay sitio para sentarse.");
-					break;
 				} 		
-			}
-		}
+			} 
+		} 
+		
 		if(!flag) {
 			System.out.println("No hay sitio.");
 			return false;
 		}
 		
+		System.out.println("Hay sitio para sentarse.");
 		
 		return true;
 	}
