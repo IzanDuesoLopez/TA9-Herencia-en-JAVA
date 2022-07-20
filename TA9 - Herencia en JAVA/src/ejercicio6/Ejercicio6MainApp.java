@@ -12,9 +12,13 @@ public class Ejercicio6MainApp {
 		Pelicula pelicula = new Pelicula("Ambition", 80, 16, "Ridley Scott");
 		Cine cine = new Cine(pelicula, 8.50, 8, 8);
 		
+		// Este espectador tiene el dinero necesario pero no la edad para poder ver la película
 		Espectador espectador1 = new Espectador("Juan", 12, 30);
+		// Este espectador no tiene el dinero necesario pero si la edad para poder ver la película
 		Espectador espectador2 = new Espectador("Rita", 18, 7);
+		// Este espectador tiene el dinero necesario y la edad para poder ver la película
 		Espectador espectador3 = new Espectador("Carlos", 20, 30);
+		// Este espectador no tiene ni el dinero necesario ni la edad para poder ver la película
 		Espectador espectador4 = new Espectador("Alba", 12, 2);
 		
 		Espectador[] cola = {espectador1, espectador2, espectador3, espectador4};
