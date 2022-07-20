@@ -19,6 +19,7 @@ public class Cine {
 		this.columnas = columnas;
 		this.sala = new Asiento[filas][columnas];
 		
+		//Este bucle sirve para rellenar la array bidimensional con objetos de tipo Asiento
 		for(int i = filas; i > 0; i--) {
 			for(int j = 0; j < columnas; j++) {
 				String numeracion_asiento = "" + i + caracteres.charAt(j);
@@ -74,14 +75,17 @@ public class Cine {
 	// Métodos
 	public boolean comprobarSentarse(Espectador espectador) {
 		boolean flag = false;
+		// Comprueba si el espectador tiene suficiente dinero para comprar una entrada
 		if(espectador.getDinero() < this.getPrecioEntrada()) {
 			System.out.println("No tiene suficiente dinero.");
 			return false;
 		}
+		// Comprueba si el espectador tiene edad suficiente para ver la película
 		if(espectador.getEdad() < this.getPelicula().getEdadMinima()) {
 			System.out.println("No tiene la edad mínima.");
 			return false;
 		}
+		/* Pasa por todas las posiciones de la array buscando un objeto de tipo Asiento que tenga el atributo de espectador en null */
 		for(int i = 0; i < this.getFilas(); i++) {
 			for(int j = 0; j < this.getColumnas(); j++) {
 				if(!(this.getSala()[i][j].getEspectador() != null)) {
@@ -89,7 +93,7 @@ public class Cine {
 				} 		
 			} 
 		} 
-		
+		// Si el flag no se ha puesto en true quiere decir que no ha encontrado ningún sitio libre para sentarse
 		if(!flag) {
 			System.out.println("No hay sitio.");
 			return false;
@@ -100,6 +104,7 @@ public class Cine {
 		return true;
 	}
 	
+	// Método para buscar posiciones aleatorias e intentar sentar al espectador en el asiento de la array de la posición aleatoria
 	public void sentarEspectador(Espectador espectador) {
 		int posicion_x;
 		int posicion_y;
@@ -118,6 +123,8 @@ public class Cine {
 		}
 	}
 	
+	/* Método para imprimir por pantalla una representación de la sala de cine 
+	teniendo en cuenta el valor del atributo espectador del objeto de tipo Asiento */
 	public void mostrarSala() {
 		for(int i = this.getFilas(); i > 0; i--) {
 			for(int j = 0; j < this.getColumnas(); j++) {
